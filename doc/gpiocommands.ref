@@ -1,0 +1,9 @@
+echo default > /sys/devices/ocp/ocp:P8_39_pinmux/state
+
+echo 76 > /sys/class/gpio/export
+
+echo out > /sys/class/gpio/gpio76/direction
+
+echo 1 > /sys/class/gpio/gpio76/value
+
+echo 0 > /sys/class/gpio/gpio76/value
