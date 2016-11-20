@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <sys/types.h>
+#include <stdio.h>
 
 // Function definitions
 int pinInit(char *pchPin, char *pchDir)
@@ -87,7 +88,7 @@ printf("\nERROR: setPinMode(): Not a root user. Please run with root previleges 
 
 int exportPin(char *pchPin)
 {
-    char *pchFile, *pchCmd = NULL, chBuff[256];
+    char *pchFile, *pchCmd = NULL;
     int iPin = 0, iRet = 0;
     FILE *pfCmd = NULL;
     
@@ -136,7 +137,7 @@ int exportPin(char *pchPin)
 
 int setPinDirection(char *pchPin, char *pchDir)
 {
-    char *pchFile, *pchCmd = NULL, chBuff[256];
+    char *pchFile, *pchCmd = NULL;
     int iPin = 0, iRet = 0;
     FILE *pfCmd = NULL;
     
@@ -187,7 +188,7 @@ int setPinDirection(char *pchPin, char *pchDir)
 
 int setPinValue(char *pchPin, int iValue)
 {
-    char *pchFile = NULL, *pchCmd = NULL, chBuff[256];
+    char *pchFile = NULL, *pchCmd = NULL;
     int iPin = 0, iRet = 0;
     FILE *pfCmd = NULL;
 
@@ -235,7 +236,7 @@ int setPinValue(char *pchPin, int iValue)
 
 int getPinValue(char *pchPin, int *piValue)
 {
-    char *pchFile = NULL, *pchCmd = NULL, chBuff[2];
+    char *pchFile = NULL, chBuff[2] = {'\0'};
     int iPin = 0, iRet = 0, iRead = 0;
     FILE *pFile = NULL;
 
