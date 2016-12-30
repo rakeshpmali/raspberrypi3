@@ -1,3 +1,3 @@
 # raspberrypi3
 
-coming soon ...
+With CoAP information
